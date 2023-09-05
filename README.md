@@ -10,10 +10,7 @@ width: 140px;
 
 ### Seattle University's Artificial Intelligence (AI) and Machine Learning (ML) Club
 
-<br>
 
-
----
 
 #### What does A.n.I.Ma.L Stand For?
 
