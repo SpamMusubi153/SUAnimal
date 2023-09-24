@@ -8,20 +8,20 @@ import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Hero from '../components/Hero.astro';
 import Grid from '../components/Grid.astro';
 
-const projects = (await getCollection('work')).sort(
+const projects = (await getCollection('news')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
 ---
 
 <BaseLayout
-	title="My Work | Jeanine White"
+	title="Animal News"
 	description="Learn about Jeanine White's most recent projects"
 >
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-8">
 			<Hero
-				title="My Work"
-				tagline="See my most recent projects below to get an idea of my past experience."
+				title="Animal News"
+				tagline="Read the latest news from Animal!"
 				align="start"
 			/>
 			<Grid variant="offset">
