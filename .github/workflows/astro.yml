@@ -27,8 +27,8 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  # BUILD_PATH: "./Website" # default value when not using subfolders
-  BUILD_PATH: Website
+  BUILD_PATH: "." # default value when not using subfolders
+  # BUILD_PATH: Website
 
 jobs:
   build:
