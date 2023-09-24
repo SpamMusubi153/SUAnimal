@@ -6,8 +6,8 @@ import type { iconPaths } from './IconPaths';
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
 	{ label: 'Home', href: '/SUAnimal/' },
-	{ label: 'News', href: '/SUAnimal/news/' },
 	{ label: 'About', href: '/SUAnimal/about/' },
+	{ label: 'News', href: '/SUAnimal/news/' },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -47,8 +47,9 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 								'link',
 								{
 									active:
-										Astro.url.pathname === href ||
-										(href !== '/SUAnimal/' && Astro.url.pathname.startsWith(href)),
+										{label} === "Home" ||
+										// Astro.url.pathname === href ||
+										({label} !== 'Home' && Astro.url.pathname.startsWith(href)),
 								},
 							]}
 							href={href}
