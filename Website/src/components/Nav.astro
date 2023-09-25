@@ -75,6 +75,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			</div>
 		</div>
 	</noscript>
+	<!-- This one was visible -->
 	<div id="menu-content" hidden>
 		<ul class="nav-items">
 			{
@@ -90,7 +91,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 										// (href !== '/SUAnimal/' && Astro.url.pathname.startsWith(href)),
 
 										label == 'Home' ||
-										(!(label == 'Home') && Astro.url.pathname.startsWith(href)),
+										(label != 'Home' && Astro.url.pathname.startsWith(href)),
 								},
 							]}
 							href={href}
