@@ -47,14 +47,14 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 								'link',
 								{
 									active:
-										label == 'Home'
+										label == 'Home' ||
 										// Astro.url.pathname === href ||
-										// (!(label == 'Home') && Astro.url.pathname.startsWith(href)),
+										(!(label == 'Home') && Astro.url.pathname.startsWith(href)),
 								},
 							]}
 							href={href}
 						>
-							A{label}
+							{label}
 						</a>
 					</li>
 				))
@@ -86,13 +86,16 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 								'link',
 								{
 									active:
-										Astro.url.pathname === href ||
-										(href !== '/SUAnimal/' && Astro.url.pathname.startsWith(href)),
+										// Astro.url.pathname === href ||
+										// (href !== '/SUAnimal/' && Astro.url.pathname.startsWith(href)),
+
+										label == 'Home' ||
+										(!(label == 'Home') && Astro.url.pathname.startsWith(href)),
 								},
 							]}
 							href={href}
 						>
-							B{label}
+							{label}
 						</a>
 					</li>
 				))
