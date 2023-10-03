@@ -35,16 +35,45 @@ const projects = (await getCollection('news'))
 					
 				>
 					<div class="homepage-buttons">
-						<button class = "get-started-button">  Get Started</button>
-						<button class = "learn-more-button"> Learn More</button>
-						
+						<a href="https://github.com/SpamMusubi153/SUAnimal">
+							<button class = "get-started-button">  Get Started</button>
+						</a>
+						<a href="/SUAnimal/about/">
+							<button class = "learn-more-button"> Learn More</button>
+						</a>
 					</div>
 				</Hero>
 			</header>
 			
 			<Skills />
 		</div>
+			<section class="section with-background bg-variant">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h3>Join the A.N.I.MA.L Community</h3>
+					<p>
+						Dive into the world of ethical AI with us! Whether you're new to technology or have prior experience, 
+						we welcome all Seattle University students to join. Engage in discussions, workshops, and projects centered around responsible AI and machine learning practices.
+					</p>
+				</header>
 
+				<div class="gallery">
+					<Grid variant="small">
+						{
+							[
+								{ title: 'Weekly Meetings', subtext: 'Every Wednesday at 4 PM in Bannan 629' },
+								{ title: 'Monthly Meetings', subtext: 'First Wednesday of the month at 4 PM in Bannan 629 ' }
+							].map((item) => (
+								<li class="mention-card">
+									<strong><p>{item.title}</p></strong>
+									<div><small class="subtext">{item.subtext}</small></div> {/* Wrapped in a div */}
+								</li>
+							))
+						}
+					</Grid>
+	
+				</div>
+				
+			</section>
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
@@ -72,27 +101,7 @@ const projects = (await getCollection('news'))
 				</div>
 			</section>
 
-			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
-					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
-					</p>
-				</header>
 
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-			</section>
 		</main>
 
 		<ContactCTA />
@@ -182,31 +191,13 @@ const projects = (await getCollection('news'))
 		position: relative;
 	}
 
-	.with-background::before {
-		--hero-bg: var(--bg-image-subtle-2);
-
-		content: '';
-		position: absolute;
-		pointer-events: none;
-		left: 50%;
-		width: 100vw;
-		aspect-ratio: calc(2.25 / var(--bg-scale));
-		top: 0;
-		transform: translateY(-75%) translateX(-50%);
-		background:
-			url('/SUAnimal/assets/backgrounds/noise.png') top center/220px repeat,
-			var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
-			var(--gray-999);
-		background-blend-mode: overlay, normal, normal, normal;
-		mix-blend-mode: var(--bg-blend-mode);
-		z-index: -1;
-	}
 
 	.with-background.bg-variant::before {
 		--hero-bg: var(--bg-image-subtle-1);
 	}
 
 	.section-header {
+		margin-top: -50px;
 		justify-self: center;
 		text-align: center;
 		max-width: 50ch;
@@ -216,6 +207,8 @@ const projects = (await getCollection('news'))
 
 	.section-header h3 {
 		font-size: var(--text-2xl);
+		color: var(--blue-0);
+		opacity: 0.77;
 	}
 
 	@media (min-width: 50em) {
@@ -236,6 +229,7 @@ const projects = (await getCollection('news'))
 
 		.section-header h3 {
 			font-size: var(--text-4xl);
+			color: var(--blue-0);
 		}
 
 		.with-cta .section-header {
@@ -252,21 +246,33 @@ const projects = (await getCollection('news'))
 		}
 	}
 
+
+
 	/* ====================================================== */
 
-	.mention-card {
+	.mention-card  {
 		display: flex;
+		flex-direction: column;
 		height: 7rem;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		border: 1px solid var(--gray-800);
+		border: 1px linear var(--gradient-accent-orange);
 		border-radius: 1.5rem;
 		color: var(--gray-300);
 		background: var(--gradient-subtle);
 		box-shadow: var(--shadow-sm);
+		font-size: 25px;
+		font-weight: bold;
+		position:
 	}
 
+	.mention-card .subtext {
+		display: block;
+		margin-top: 1rem;
+		font-size: 1rem; /* Adjust this to your preferred size */
+		color: #777; 
+	}	
 	@media (min-width: 50em) {
 		.mention-card {
 			border-radius: 1.5rem;

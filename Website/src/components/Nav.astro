@@ -1,19 +1,18 @@
 ---
 import Icon from './Icon.astro';
-import ThemeToggle from './ThemeToggle.astro';
 import type { iconPaths } from './IconPaths';
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
 	{ label: 'Home', href: '/SUAnimal/' },
-	{ label: 'About', href: '/SUAnimal/about/' },
+	{ label: 'About Us', href: '/SUAnimal/about/' },
 	{ label: 'News', href: '/SUAnimal/news/' },
 	
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
 const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[] = [
-	{ label: 'Discord', href: 'https://github.com/me', icon: 'discord-logo' },
-	{ label: 'GitHub', href: 'https://github.com/me', icon: 'github-logo' },
+	{ label: 'Discord', href: 'https://discord.gg/3XEUR7x95', icon: 'discord-logo' },
+	{ label: 'GitHub', href: 'https://github.com/SpamMusubi153/SUAnimal', icon: 'github-logo' },
 ];
 ---
 
