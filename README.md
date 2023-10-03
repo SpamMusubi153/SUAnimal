@@ -1,4 +1,4 @@
-<img src="logo.png" 
+<img src="Logo/250x250 Logo with Text.png" 
 style="
 float: right;
 background-color: white;
