@@ -5,55 +5,72 @@ import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+<BaseLayout title="About | A.N.I.MA.L" description="About A.N.I.MA.L">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+				title="About Us"
+				tagline="Building AI for the Better Good."
 			>
+			</Hero>
 				<img
 					width="1553"
 					height="873"
-					src="/SUAnimal/assets/at-work.jpg"
-					alt="Jeanine White at work with a colleague"
+					src="/SUAnimal/assets/Logo/logo-2.png"
 				/>
-			</Hero>
+			
 
 			<section>
-				<h2 class="section-title">Background</h2>
+				<h2 class="section-title">Meetings</h2>
+				<div class="content meetings">
+					<div class="meeting">
+						<p>
+							<b>Drop-In Meetings Every Wednesday</b><br>
+							<b>Time:</b> 4:00 PM <br>
+							<b>Location:</b> Bannan 629
+						</p>
+					</div>
+			
+					<div class="meeting">
+						<p>
+							<b>Monthly Meetings</b><br>
+							<b>Time:</b> 4:00 PM <br>
+							<b>Location:</b> Bannan 629
+						</p>
+					</div>
+				</div>
+				<h2 class="section-title">What is an A.N.I.MA.L</h2>
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl
-						condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu
-						odio ut sem nulla pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum
-						dui faucibus in ornare.
+						Greetings from A.n.I.Ma.L club! We're an enthusiastic bunch from Seattle University with 
+						a thirst for knowledge about AI and ML technologies. But it's not just about algorithms 
+						and codes; it's about ensuring these powerful tools are used for the greater good. Understanding the 
+						sheer potential and the ethical considerations of AI is a massive responsibility, and we're up for the challenge. 
+						We invite everyone - whether you're a student, faculty, or someone from the broader Seattle community, to join our endeavor.
 					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
+					
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">A Warm Welcome to Our Community Members</h2>
+				<div class="content">
+					<p>Being nestled in the heart of Seattle University, we are inherently connected to the broader Seattle community. 
+						Diversity is our strength, and we believe in harnessing AI's potential to serve our community better. 
+						Our vision transcends academic learnings - we aim to build trustworthy relationships, make a real difference, 
+						and offer hands-on learning experiences. We value collaborations and are always open to community-driven projects and ideas.
 					</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Education</h2>
+				<h2 class="section-title">Club Goals</h2>
 				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
+					<p><b>Informed Decision Making:</b> Equip the Seattle University community with knowledge to navigate the AI world confidently. We want to debunk myths, highlight the current limitations, and expose biases in AI and ML technologies.</p>
 				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
 				<div class="content">
-					<p>officia unde omnis</p>
+					<p><b>Community Engagement:</b> Our club isn't just about individual growth; it's about fostering a thriving community of students and faculty who share a common passion for AI and ML. Through research, hackathons, and other engagements, we aim to keep our members at the forefront of AI advancements.</p>
+				</div>
+				<div class="content">
+					<p><b>Ethical AI Leadership:</b> It's one thing to develop AI solutions and entirely another to do it responsibly. We prioritize molding our members into leaders who not only excel in ML but also advocate for and implement ethical AI practices.</p>
 				</div>
 			</section>
 		</main>
@@ -69,7 +86,17 @@ import Hero from '../components/Hero.astro';
 		gap: 3.5rem;
 	}
 
+	.meetings {
+    display: flex;
+    gap: 2rem; 
+	}	
+
+	.meeting {
+		flex: 1;
+	}
+
 	img {
+		transform: scale(1.23);
 		margin-top: 1.5rem;
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
@@ -85,7 +112,8 @@ import Hero from '../components/Hero.astro';
 	.section-title {
 		grid-column-start: 1;
 		font-size: var(--text-xl);
-		color: var(--gray-0);
+		color: var(--blue-0);
+		opacity: 0.77;
 	}
 
 	.content {

@@ -1,31 +1,26 @@
 ---
 import Icon from './Icon.astro';
-import ThemeToggle from './ThemeToggle.astro';
 import type { iconPaths } from './IconPaths';
-
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
 	{ label: 'Home', href: '/SUAnimal/' },
-	{ label: 'About', href: '/SUAnimal/about/' },
+	{ label: 'About Us', href: '/SUAnimal/about/' },
 	{ label: 'News', href: '/SUAnimal/news/' },
+	
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
 const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[] = [
-	{ label: 'Twitter', href: 'https://twitter.com/me', icon: 'twitter-logo' },
-	{ label: 'Twitch', href: 'https://twitch.tv/me', icon: 'twitch-logo' },
-	{ label: 'GitHub', href: 'https://github.com/me', icon: 'github-logo' },
-	{ label: 'CodePen', href: 'https://codepen.io/me', icon: 'codepen-logo' },
-	{ label: 'dribbble', href: 'https://dribbble.com/me', icon: 'dribbble-logo' },
-	{ label: 'YouTube', href: 'https://www.youtube.com/@me/', icon: 'youtube-logo' },
+	{ label: 'Discord', href: 'https://discord.gg/3XEUR7x95', icon: 'discord-logo' },
+	{ label: 'GitHub', href: 'https://github.com/SpamMusubi153/SUAnimal', icon: 'github-logo' },
 ];
 ---
 
 <nav>
 	<div class="menu-header">
 		<a href="/SUAnimal" class="site-title">
-			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
-			 Jeanine White
+			<Icon icon="logo" color="var(--accent-regular)" size="1.6em" gradient />
+			 A.N.I.MA.L
 		</a>
 		<menu-button>
 			<template>
@@ -114,9 +109,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 				}
 			</div>
 
-			<div class="theme-toggle">
-				<ThemeToggle />
-			</div>
+			
 		</div>
 	</div>
 </nav>
@@ -179,7 +172,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		gap: 0.5rem;
 		align-items: center;
 		line-height: 1.1;
-		color: var(--gray-0);
+		color: var(--blue-0);
 		text-decoration: none;
 	}
 
@@ -229,13 +222,13 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		line-height: 1.2;
 		list-style: none;
 		padding: 2rem;
-		background-color: var(--gray-999);
+		background-color: none;
 		border-bottom: 1px solid var(--gray-800);
 	}
 
 	.link {
 		display: inline-block;
-		color: var(--gray-300);
+		color: var(--blue-0);
 		text-decoration: none;
 	}
 
@@ -273,7 +266,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 	.social:hover,
 	.social:focus {
-		color: var(--accent-text-over);
+		color: var(--blue-0);
 	}
 
 	.theme-toggle {
@@ -310,15 +303,14 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			border-radius: 999rem;
 			border: 0;
 			padding: 0.5rem 0.5625rem;
-			background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
-			box-shadow: var(--shadow-md);
+			
 		}
 
 		.nav-items::before {
 			position: absolute;
 			inset: -1px;
 			content: '';
-			background: var(--gradient-stroke);
+			background: none;
 			border-radius: 999rem;
 			z-index: -1;
 		}
@@ -331,16 +323,6 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 				background-color var(--theme-transition);
 		}
 
-		.link:hover,
-		.link:focus {
-			color: var(--gray-100);
-			background-color: var(--accent-subtle-overlay);
-		}
-
-		.link.active {
-			color: var(--accent-text-over);
-			background-color: var(--accent-regular);
-		}
 
 		.menu-footer {
 			--icon-padding: 0.375rem;
