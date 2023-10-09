@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+import Grid from '../components/Grid.astro';
+
+---
+
+<BaseLayout
+	title="Animal Resources"
+	description="Take a look at the latest Animal Resources!"
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+			<Hero
+				title="Animal Resources"
+				tagline="Take a look at the latest Animal Resources!"
+				align="start"
+			/>
+			
+            <!--
+            <iframe
+                src="https://suanimal.notion.site/Animal-Resources-c6e4166605d648ad8d99e235da482bc1?pvs=4"
+                title="Animal Resources"
+                style="width:auto; height:auto;"
+            ></iframe>
+            -->
+
+            <a
+                href="https://suanimal.notion.site/Animal-Resources-c6e4166605d648ad8d99e235da482bc1?pvs=4"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Click here to take a look at the latest Animal resources!
+            </a>
+
+
+		</main>
+	</div>
+</BaseLayout>
