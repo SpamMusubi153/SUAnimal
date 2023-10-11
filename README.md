@@ -23,5 +23,5 @@ This website is a GitHub "repository" for Seattle University's A.n.I.Ma.L club. 
 
 If you got here by mistake, visit our official website at:
 
-https://SpamMusubi153.GitHub.io/SUAnimal
+
 
