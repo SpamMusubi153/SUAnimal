@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Constiution | A.N.I.MA.L" description="Constiution A.N.I.MA.L">
+    <div class="title-container">
+        <h1>Constitution</h1>
+    </div>
+    <div class="PDF">
+        <iframe src="assets/constiution/constitution.pdf" width="80%" height="700px"></iframe>
+    </div> 
+
+</BaseLayout>
+
+<style>
+    .title-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom:50px;
+    }
+
+    .title-container h1 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .PDF {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+
+    .PDF iframe {
+        border: none;
+    }
+
+</style>
+
+
