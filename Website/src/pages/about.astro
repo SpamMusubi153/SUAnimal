@@ -1,59 +1,122 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
+import CallToAction from '../components/CallToAction.astro';
+import Icon from '../components/Icon.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+<BaseLayout title="About | A.N.I.MA.L" description="About A.N.I.MA.L">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+				title="About Us"
+				tagline="AI and ML for a Just and Humane World"
 			>
+			</Hero>
 				<img
 					width="1553"
 					height="873"
-					src="/SUAnimal/assets/at-work.jpg"
-					alt="Jeanine White at work with a colleague"
+					src="/SUAnimal/assets/Logo/logo-2.png"
 				/>
-			</Hero>
+			
 
 			<section>
-				<h2 class="section-title">Background</h2>
+				<h2 class="section-title">Meetings</h2>
+				<div class="content meetings">
+					<div class="meeting">
+						<p>
+							<b>Drop-In Meetings Every Wednesday</b><br>
+							<b>Time:</b> 4:00 PM <br>
+							<b>Location:</b> Bannan 629
+						</p>
+					</div>
+			
+					<div class="meeting">
+						<p>
+							<b>Monthly Meetings on the Second Wednesday of the Month</b><br>
+							<b>Time:</b> 4:00 PM <br>
+							<b>Location:</b> Bannan 629
+						</p>
+					</div>
+					<div class="buttons">
+						<a href="/SUAnimal/constitution">
+							<button class = "const-button">Constitution</button>
+						</a>
+					</div>
+				</div>
+				<h2 class="section-title">What is an A.N.I.MA.L</h2>
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl
-						condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu
-						odio ut sem nulla pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum
-						dui faucibus in ornare.
+					<!--
+						Greetings from A.n.I.Ma.L club! We're an enthusiastic bunch from Seattle University with 
+						a thirst for knowledge about AI and ML technologies. But it's not just about algorithms 
+						and codes; it's about ensuring these powerful tools are used for the greater good. Understanding the 
+						sheer potential and the ethical considerations of AI is a massive responsibility, and we're up for the challenge. 
+						We invite everyone - whether you're a student, faculty, or someone from the broader Seattle community, to join our endeavor.
+					-->
+					Hello, and welcome to the A.n.I.Ma.L club! We are a group of students at Seattle University who are
+interested in learning, building, and exploring more ethical AI systems. We are focused on modern
+machine learning (ML) technologies, which are based on the idea that a computer can learn to do a task
+itself if it has enough examples.
+We recognize that this collection of technologies comes with responsibility, and can perpetrate
+injustices if used improperly. Therefore, all club leaders and members will be expected to place an active
+focus on working towards a just and humane world through their work.
+Whether you are a student, faculty member, or broader community member, we would like to welcome
+you to our community. Below you will find more information about who we are, and how to get
+involved with our club.
 					</p>
+					
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">A Warm Welcome to Our Community Members</h2>
+				<div class="content">
+					<!--
+					<p>Being nestled in the heart of Seattle University, we are inherently connected to the broader Seattle community. 
+						Diversity is our strength, and we believe in harnessing AI's potential to serve our community better. 
+						Our vision transcends academic learnings - we aim to build trustworthy relationships, make a real difference, 
+						and offer hands-on learning experiences. We value collaborations and are always open to community-driven projects and ideas.
+					</p>-->
 					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
+						A.n.I.Ma.L recognizes that it is located in the heart of Seattle University and the broader Seattle
+community. Our members come from a diverse set of backgrounds and interests. We recognize that
+positive benefits can be realized when AI technology is combined with everyday needs. Our club
+therefore strives to connect our member’s understanding of AI technology to our broader community.
+To us, these connections build relationships of trust, give back to the communities that support
+A.n.I.Ma.L, and provide learning opportunities for our students. This is why A.n.I.Ma.L will always
+welcome projects, ideas, and consultations with local community members. While some endeavors may
+be beyond our resources or capabilities, we encourage you to reach out to us. We will try our best to
+meet your needs.
+
+
 					</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Education</h2>
+				<h2 class="section-title">Club Goals</h2>
+
+
+
 				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>officia unde omnis</p>
+					<!--<p><b>Informed Decision Making:</b> Equip the Seattle University community with knowledge to navigate the AI world confidently. We want to debunk myths, highlight the current limitations, and expose biases in AI and ML technologies.</p>-->
+					<li>
+						Empowering members of the broader Seattle University community to understand and make more informed decisions about their interactions with artificial intelligence (AI) and the underlying machine learning (ML) technology
+					</li>
+
+					<li>Dispelling common misconceptions surrounding artificial intelligence (Al) technology by demonstrating modern limitations and biases present in the underlying machine learning (ML) technology.</li>
+				
+					<li>Fostering an active community of Seattle University students and faculty engaged in projects and research involving artificial intelligence (AI) and machine learning (ML).</li>
+
+					<li>Supporting interested students in remaining up to date with current research in the fields of artificial intelligence (Al) and machine learning (ML).</li>
+
+					<li>Encouraging students and faculty to develop machine learning (ML) skills and experience through competitions, hackathons, and projects.</li>
+
+					<li>Connecting interested students and faculty with the needs of the local community for projects and solutions involving machine learning (ML) and artificial intelligence (Al).</li>
+
+					<li>Developing machine learning (ML) leaders with experience thinking about, discussing, and implementing more ethical approaches to artificial intelligence (AI) and machine learning (ML).</li>
+
+
 				</div>
 			</section>
 		</main>
@@ -69,12 +132,35 @@ import Hero from '../components/Hero.astro';
 		gap: 3.5rem;
 	}
 
+	.meetings {
+    display: flex;
+    gap: 2rem; 
+	}	
+
+	.meeting {
+		flex: 1;
+	}
+
 	img {
+		transform: scale(1.23);
 		margin-top: 1.5rem;
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
 	}
 
+
+	.const-button {
+		background: var(--gradient-accent-orange);;
+		opacity: 0.77;
+		color: #ffffff; /* White text color */
+		padding: 20px 32px; /* Padding for the button */
+		border-radius: 12.84px; /* Rounded corners */
+		border: none; /* Removes the default border */
+		cursor: pointer; /* Hand cursor on hover to indicate it's clickable */
+		font-size: 20px; /* Text size */
+		font-weight: 500;
+		transition: background-color 0.3s ease; /* Smooth transition for background color change on hover */
+	}
 	section {
 		display: flex;
 		flex-direction: column;
@@ -85,7 +171,8 @@ import Hero from '../components/Hero.astro';
 	.section-title {
 		grid-column-start: 1;
 		font-size: var(--text-xl);
-		color: var(--gray-0);
+		color: var(--blue-0);
+		opacity: 0.77;
 	}
 
 	.content {
