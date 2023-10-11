@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
+import CallToAction from '../components/CallToAction.astro';
+import Icon from '../components/Icon.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 ---
@@ -37,6 +38,11 @@ import Hero from '../components/Hero.astro';
 							<b>Time:</b> 4:00 PM <br>
 							<b>Location:</b> Bannan 629
 						</p>
+					</div>
+					<div class="buttons">
+						<a href="/SUAnimal/constitution">
+							<button class = "const-button">Constitution</button>
+						</a>
 					</div>
 				</div>
 				<h2 class="section-title">What is an A.N.I.MA.L</h2>
@@ -142,6 +148,19 @@ meet your needs.
 		box-shadow: var(--shadow-md);
 	}
 
+
+	.const-button {
+		background: var(--gradient-accent-orange);;
+		opacity: 0.77;
+		color: #ffffff; /* White text color */
+		padding: 20px 32px; /* Padding for the button */
+		border-radius: 12.84px; /* Rounded corners */
+		border: none; /* Removes the default border */
+		cursor: pointer; /* Hand cursor on hover to indicate it's clickable */
+		font-size: 20px; /* Text size */
+		font-weight: 500;
+		transition: background-color 0.3s ease; /* Smooth transition for background color change on hover */
+	}
 	section {
 		display: flex;
 		flex-direction: column;
